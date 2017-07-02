@@ -12,6 +12,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
+  externals: {},
+
+  module: {},
+
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     hot: true,
