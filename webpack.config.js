@@ -14,7 +14,29 @@ module.exports = {
 
   externals: {},
 
-  module: {},
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        loaders: [
+          'style-loader',
+          { loader: 'css-loader', options: { sourceMap: true } },
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.pug/,
+        loaders: ['html-loader',
+          {
+            loader: 'pug-html-loader',
+            options: {
+              pretty: !isProd,
+            },
+          },
+        ],
+      },
+    ],
+  },
 
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
