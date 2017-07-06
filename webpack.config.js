@@ -35,6 +35,12 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loaders: [
+          'file-loader'
+        ]
+      },
     ],
   },
 
