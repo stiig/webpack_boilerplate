@@ -5,6 +5,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "yarn run clean && NODE_ENV=production webpack -p",
+    "build:dev": "webpack --env=dev --progress --profile --colors",
+    "build:dist": "webpack --env=prod --progress --profile --colors",
     "clean": "rm -f dist/*"
   },
   "license": "MIT",
