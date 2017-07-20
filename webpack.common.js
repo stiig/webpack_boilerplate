@@ -51,7 +51,6 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin(),
     new HtmlWebpackPlugin({ template: './src/index.pug' }),
   ],
